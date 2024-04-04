@@ -1,22 +1,18 @@
 {
   "name": "desafio1",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "test": "echo \"Error:  no test specified\" && exit 1",
+    "debug": "SET DEBUG=desafio1:*& npm start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/deyvideugenio/desafio1.git"
-  },
-  "author": "Deyvid Eugenio",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/deyvideugenio/desafio1/issues"
-  },
-  "homepage": "https://github.com/deyvideugenio/desafio1#readme",
-  "description": "",
   "dependencies": {
-    "express": "^4.19.2"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.19.2",
+    "http-errors": "~1.6.3",
+    "jade": "^0.29.0",
+    "morgan": "~1.9.1"
   }
 }
