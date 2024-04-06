@@ -2,14 +2,14 @@ const express = require('express');
 const router = express.Router();
 
 const clienteControllers = require('../controllers/clienteControllers');
-const nomeMiddleware = require('../middlewares/nomeMiddleware');
+const nomeMiddleware = require('../middlewares/nomeMiddlewares');
 
 /* GET clientes listing. */
-router.get('/', nomeMiddleware.validateName, clienteControllers.findAll);
+router.get('/', clienteControllers.findAll);
 /* PUT clientes listing. */
 router.put('/', clienteControllers.update);
 /* POST clientes listing. */
-router.post('/', clienteControllers.save);
+router.post('/', nomeMiddleware.validateName, clienteControllers.save);
 /* DELETE clientes listing. */
 router.delete('/:id', clienteControllers.remove);
 
