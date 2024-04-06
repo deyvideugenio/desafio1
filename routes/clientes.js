@@ -5,7 +5,7 @@ const clienteControllers = require('../controllers/clienteControllers');
 const nomeMiddleware = require('../middlewares/nomeMiddleware');
 
 /* GET clientes listing. */
-router.get('/', nomeMiddleware.validateName clienteControllers.findAll);
+router.get('/', nomeMiddleware.validateName, clienteControllers.findAll);
 /* PUT clientes listing. */
 router.put('/', clienteControllers.update);
 /* POST clientes listing. */
